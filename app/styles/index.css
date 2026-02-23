@@ -9,6 +9,9 @@
     --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
     --font-mono: "IBM Plex Mono", "ui-monospace", Menlo, Consolas, monospace;
     --default-font-family: var(--font-serif);
+    --color-northwestern-purple: #4e2a84;
+    --color-accent-700: var(--color-northwestern-purple);
+    --color-accent-default: var(--color-northwestern-purple);
   }
 }
 
@@ -42,15 +45,6 @@
   }
 }
 
-@layer properties {
-  :root,
-  :host {
-    --color-northwestern-purple: #4e2a84;
-    --color-accent-700: var(--color-northwestern-purple);
-    --color-accent-default: var(--color-northwestern-purple);
-  }
-}
-
 .module-box {
   display: flex;
   box-sizing: border-box;
@@ -59,6 +53,16 @@
   height: 30vh;
   box-shadow: 2.5px 5px 9px #888888;
   padding: 24px;
+}
+
+.module-box .image {
+  flex: 0 0 60%;
+}
+
+.module-box img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
 }
 
 @media (max-width: 600px) {
