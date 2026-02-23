@@ -16,7 +16,6 @@ metadata:
 featured:
   - https://api.dc.library.northwestern.edu/api/v2/works/c26591b2-994b-4ba3-a87e-9124419fa91b?as=iiif
   - https://api.dc.library.northwestern.edu/api/v2/works/d4c62d7f-f50d-4b29-85e0-5d380675bec7?as=iiif
-  - https://iiif.vam.ac.uk/collections/O74660/manifest.json
   - https://api.dc.library.northwestern.edu/api/v2/works/e0d60273-e64c-49d8-99dc-d1af8f4c6266?as=iiif
 search:
   page:
