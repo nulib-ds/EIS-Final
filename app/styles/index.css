@@ -54,7 +54,6 @@
   width: 100%;
   height: 40vh;
   box-shadow: 2.5px 5px 9px #888888;
-  padding: 24px;
   margin: 24px;
   text-decoration: none;
 }
@@ -62,6 +61,7 @@
 .module-box .text {
   flex: 0 0 40%;
   padding-right: 20px;
+  margin: 24px;
   word-wrap: break-word;
   white-space: normal;
   display: flex;
