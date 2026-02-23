@@ -41,3 +41,27 @@
     letter-spacing: -0.025em;
   }
 }
+
+@layer properties {
+  :root,
+  :host {
+    --color-northwestern-purple: #4e2a84;
+    --color-accent-700: var(--color-northwestern-purple);
+    --color-accent-default: var(--color-northwestern-purple);
+  }
+}
+
+.module-box {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20vh;
+  box-shadow: 2.5px 5px 9px #888888;
+  padding: 24px;
+}
+  
+@media (max-width: 600px) {
+  .module-box {
+    padding: 15px; /* Mobile-friendly */
+  }
+}
