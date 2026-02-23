@@ -71,13 +71,24 @@
 
 .module-box .image {
   flex: 0 0 60%;
+  height: 100%;
+  padding: 0;          /* remove all internal space */
+  margin: 0;           /* remove any default gap */
+  border-radius: 0;    /* image itself will handle corners */
 }
 
-.module-box img {
-  width: 100px;
-  height: auto;
-  object-fit: cover;
+/* Makes the image fill the entire area */
+.module-box .image img {
+  width: 100%;
+  height: 100%;
+  /* Zoom/Crop to fill box fully */
+  object-fit: cover; 
+  /* Removes the default inline-image gap */
+  display: block;       
+  margin: 0;
+  padding: 0;
 }
+
 
 @media (max-width: 600px) {
   .module-box {
