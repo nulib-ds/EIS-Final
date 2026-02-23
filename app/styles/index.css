@@ -93,6 +93,20 @@
 
 @media (max-width: 600px) {
   .module-box {
-    padding: 15px; /* Mobile-friendly */
+    flex-direction: column;
+    height: auto;
+  }
+
+  .module-box .image {
+    flex: 0 0 auto; 
+    width: 100%;
+    height: 40vh;              
+    justify-content: flex-start; 
+  }
+
+  .module-box .text {
+    flex: 0 0 auto;  
+    padding: 16px;
+
   }
 }
