@@ -61,16 +61,6 @@
   padding: 24px;
 }
 
-.module-box .image {
-  flex: 0 0 60%;
-}
-
-.module-box img {
-  width: 100px;
-  height: auto;
-  object-fit: cover;
-}
-
 @media (max-width: 600px) {
   .module-box {
     padding: 15px; /* Mobile-friendly */
