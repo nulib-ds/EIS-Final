@@ -106,6 +106,7 @@
   .module-box .text {
     flex: 0 0 auto;  
     padding: 16px;
+    margin-top: auto;
     justify-content: flex-end;  
   }
 }
