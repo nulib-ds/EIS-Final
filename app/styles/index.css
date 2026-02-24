@@ -93,7 +93,7 @@
 
 @media (max-width: 600px) {
   .module-box {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
 
