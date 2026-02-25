@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@canopy-iiif/app/ui/styles/index.css";
+@import "./banner.css";
 @import "./northwestern-brand.css";
 @import "./module.css";
 
