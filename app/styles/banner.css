@@ -12,19 +12,17 @@
   padding: 2rem;
 }
 
-.banner-text {
+.banner-text-left {
   color: white;
   font-family: "Playfair Display", serif;
   text-align: left;
   max-width: 90%;
 }
-
-.banner-text h1 {
+.banner-text-left h1 {
   font-size: clamp(1.8rem, 3vw, 3rem); 
   margin-bottom: 0.5rem;
 }
-
-.banner-text p {
+.banner-text-left p {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
@@ -33,8 +31,7 @@
     height: 40vh;
     padding: 1.5rem;
   }
-
-  .banner-text {
+  .banner-text-left {
     max-width: 100%;
   }
 }
@@ -44,10 +41,50 @@
     height: 35vh;
     padding: 1rem;
   }
-  .banner-text h1 {
+  .banner-text-left h1 {
     font-size: 1.5rem;
   }
-  .banner-text p {
+  .banner-text-left p {
+    font-size: 0.9rem;
+  }
+}
+
+
+.banner-text-center {
+  color: white;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  top: 50%;
+}
+.banner-text-center h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem); 
+  margin-bottom: 0.5rem;
+}
+.banner-text-center p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    height: 40vh;
+    padding: 1.5rem;
+  }
+  .banner-text-center {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    height: 35vh;
+    padding: 1rem;
+  }
+  .banner-text-center h1 {
+    font-size: 1.5rem;
+  }
+  .banner-text-center p {
     font-size: 0.9rem;
   }
 }
