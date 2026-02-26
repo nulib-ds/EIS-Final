@@ -1,7 +1,4 @@
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? "/EIS-Final"
-    : "";
+import { getBasePath } from "../js/getBasePath";
 
 export const exhibitions = [
   {
@@ -15,14 +12,14 @@ export const exhibitions = [
     slug: "the-daily-grind",
     title: "The Daily Grind",
     description:
-      "This exhibition explores the origins of the infrastructure debates—mass transit vs. cars, and pedestrian safety vs. traffic flow that dominate city planning.",
+      "This exhibition explores infrastructure debates in city planning.",
     image: "/images/home/chicago-bw.webp"
   },
   {
     slug: "invisible-hazards",
     title: "Invisible Hazards",
     description:
-      'This exhibition features documents on the health hazards of lead-based paint, specifically addressing "pica" in children.',
+      'This exhibition features documents on health hazards of lead-based paint.',
     image: "/images/home/chicago-bw.webp"
   },
 ];
