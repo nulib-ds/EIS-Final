@@ -1,3 +1,8 @@
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? "/EIS-Final"
+    : "";
+
 export const exhibitions = [
   {
     slug: "priced-out",
