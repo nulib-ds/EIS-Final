@@ -3,7 +3,6 @@
  * may also import components from dependencies and re-export them here.
  */
 
-import ExhibitionModules from "./ExhibitionModules";
 
 // Map SSR-safe components to be rendered at build time and used in MDX files
 export const components = {
@@ -19,3 +18,4 @@ export const clientComponents = {
   ExhibitionModules: './ExhibitionModules.tsx',
   SigmaExample: './SigmaExample.Client.jsx',
 };
+
