@@ -16,5 +16,6 @@ export const clientComponents = {
   Glossary: "./Glossary.client.tsx",
   StoryMapJS: './StoryMapJS.client.tsx',
   ExhibitionModules: './ExhibitionModules.tsx',
+  SigmaExample: './SigmaExample.Client.jsx',
 };
 
