@@ -1,15 +1,16 @@
 .banner-image {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("https://images.pexels.com/photos/5824010/pexels-photo-5824010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 2rem;
+}
+
+.banner-image:has(.banner-text-left) {
+  align-items: flex-end;
 }
 
 .banner-text-left {
@@ -26,6 +27,7 @@
   font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
+/* Mobile compatability for banners */
 @media (max-width: 768px) {
   .banner-image {
     height: 40vh;
@@ -49,14 +51,12 @@
   }
 }
 
-
 .banner-text-center {
   color: white;
   font-family: "Playfair Display", serif;
   text-align: center;
   max-width: 90%;
   margin: 0 auto;
-  top: 50%;
 }
 .banner-text-center h1 {
   font-size: clamp(1.8rem, 3vw, 3rem); 
@@ -87,4 +87,19 @@
   .banner-text-center p {
     font-size: 0.9rem;
   }
+}
+
+/* Page specific banner images*/
+
+header#homepage-banner {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("../../images/home/chicago-bw.webp");
+}
+
+header#priced-out-banner {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("../../images/priced-out/downtown-urban-renewal-area-plan.webp");
+  height: 70vh;
 }
