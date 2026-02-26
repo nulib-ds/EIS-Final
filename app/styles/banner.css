@@ -94,12 +94,12 @@
 header#homepage-banner {
     background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../../images/home/chicago-bw.webp");}
+    url("../images/home/chicago-bw.webp");}
 
 header#priced-out-banner {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../../images/home/chicago-bw.webp");  
-    height: 70vh;
+    url("../images/priced-out/downtown-urban-renewal-area-plan.webp");
+     height: 70vh;
 }
 
