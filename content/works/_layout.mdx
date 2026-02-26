@@ -13,6 +13,11 @@ import {
 <Container variant="wide" className="canopy-work--layout">
   <div className="canopy-work--primary">
     <Viewer iiifContent={props.manifest.id} />
+    <Glossary 
+      contentSelector=".canopy-work--secondary"
+      glossarySelector="#glossary-section"
+    />
+    <div id="glossary-section"></div>
   </div>
   <div className="canopy-work--secondary">
     <header>

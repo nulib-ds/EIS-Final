@@ -1,0 +1,53 @@
+.glossary-term {
+    /*Style for glossary terms*/
+    text-decoration: underline dotted rgb(46, 66, 46);
+    display: inline-block;
+    cursor: help;
+    background-color: rgb(202, 237, 205);
+    position: relative;
+}
+
+.glossary-tooltip {
+  position: fixed;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  max-width: calc(100vw - 24px);
+  z-index: 9999;
+}
+
+.glossary-item {
+  margin-bottom: 4px;
+  padding: 2px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Mobile responsive tooltip */
+@media (max-width: 768px) {
+    .glossary-term::after {
+        max-width: 85vw;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glossary-term::after {
+        max-width: 75vw;
+        padding: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Glossary section at bottom of the page */
+.glossary-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #6bc197;
+  font-family: sans-serif;
+}

@@ -3,6 +3,7 @@
 @import "./banner.css";
 @import "./northwestern-brand.css";
 @import "./module.css";
+@import "./glossary.css";
 
 @layer properties {
   :root,
