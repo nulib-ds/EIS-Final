@@ -94,13 +94,13 @@
 header#homepage-banner {
     background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("/EIS-Final/images/home/chicago-bw.webp");
+    url("../../assets/images/home/chicago-bw.webp");
 }
 
 header#priced-out-banner {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("/EIS-Final/images/priced-out/downtown-urban-renewal-area-plan.webp");
+    url("../../assets/images/priced-out/downtown-urban-renewal-area-plan.webp");
   height: 70vh;
 }
 
