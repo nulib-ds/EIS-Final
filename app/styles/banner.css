@@ -104,3 +104,9 @@ header#priced-out-banner {
      height: 70vh;
 }
 
+header#from-cars-to-crowds-banner {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("../images/from-cars-to-crowds/top-image.webp");
+     height: 70vh;
+}
