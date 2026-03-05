@@ -1,6 +1,427 @@
 ---
-title: Impact
-description: Code Carbon Info + Visualizations - Tillie
+title: About This Collection
+description: EIS broken down by category, agency and time period
 ---
 
-## Impact
+## About This Collection
+
+<Container>
+
+<div style={{ margin: '60px 0', fontFamily: 'sans-serif', textAlign: 'center', flexWrap: 'wrap' }}>
+
+  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '30px' }}>
+    EIS Documents Thematic Categories
+  </h3>
+
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+
+    {/* PIE */}
+    <svg viewBox='0 0 32 32'
+         style={{ width: '300px', height: '300px', transform: 'rotate(-90deg)' }}>
+
+      {/* Background */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#f1f5f9'
+              strokeWidth='16' />
+
+      {/* Urban Development & Housing 29.2% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#F6CF71'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='29.2 100'>
+        <title>Urban Development & Housing — 29.2%</title>
+      </circle>
+
+      {/* Transportation & Infrastructure 27.1% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#F89C74'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='27.1 100'
+              strokeDashoffset='-29.2'>
+        <title>Transportation & Infrastructure — 27.1%</title>
+      </circle>
+
+      {/* Environment, Water, & Natural Resources 16.7% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#DCB0F2'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='16.7 100'
+              strokeDashoffset='-56.3'>
+        <title>Environment, Water, & Natural Resources — 16.7%</title>
+      </circle>
+
+      {/* Energy & Power Generation 11.1% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#87C55F'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='11.1 100'
+              strokeDashoffset='-73'>
+        <title>Energy & Power Generation — 11.1%</title>
+      </circle>
+
+      {/* Health & Safety 6.2% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#9EB9F3'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='6.2 100'
+              strokeDashoffset='-84.1'>
+        <title>Health & Safety — 6.2%</title>
+      </circle>
+
+      {/* Aerospace & Defense 4.9% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#FE88B1'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='4.9 100'
+              strokeDashoffset='-90.3'>
+        <title>Aerospace & Defense — 4.9%</title>
+      </circle>
+
+      {/* Recreation, Culture, & Other 4.9% */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#B3B3B3'
+              strokeWidth='16'
+              pathLength='100'
+              strokeDasharray='4.9 100'
+              strokeDashoffset='-95.2'>
+        <title>Recreation, Culture, & Other — 4.9%</title>
+      </circle>
+
+      {/* Center hole */}
+      <circle r='4.5' cx='16' cy='16' fill='white' />
+
+    </svg>
+
+    {/* LEGEND */}
+    <div style={{ textAlign: 'left', fontSize: '14px' }}>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#F6CF71', marginRight: '8px' }}></span>
+        Urban Development & Housing — 29.2%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#F89C74', marginRight: '8px' }}></span>
+        Transportation & Infrastructure — 27.1%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#DCB0F2', marginRight: '8px' }}></span>
+        Environment, Water, & Natural Resources — 16.7%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#87C55F', marginRight: '8px' }}></span>
+        Energy & Power Generation — 11.1%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#9EB9F3', marginRight: '8px' }}></span>
+        Health & Safety — 6.2%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#FE88B1', marginRight: '8px' }}></span>
+        Aerospace & Defense — 4.9%
+      </div>
+
+      <div>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#B3B3B3', marginRight: '8px' }}></span>
+        Recreation, Culture, & Other — 4.9%
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style={{ fontSize: '12px', color: '#64748b', marginTop: '20px', fontStyle: 'italic' }}>
+    Hover over each colored slice to see the percentage.
+  </p>
+
+</div>
+
+<div style={{ margin: '60px 0', fontFamily: 'sans-serif', textAlign: 'center' }}>
+
+  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '30px' }}>
+    EIS Documents Time Period Breakdown
+  </h3>
+
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+
+    {/* PIE */}
+    <svg viewBox='0 0 32 32'
+         style={{ width: '300px', height: '300px', transform: 'rotate(-90deg)' }}>
+
+      {/* Background */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#f1f5f9'
+              strokeWidth='16' />
+
+      {/* 1970–1975 52.8% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#83b4b3'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='52.8 100'>
+        <title>1970–1975 — 52.8%</title>
+      </circle>
+
+      {/* 1976–1979 40.3% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#FFF0C3'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='40.3 100'
+        strokeDashoffset='-52.8'>
+        <title>1976–1979 — 40.3%</title>
+      </circle>
+
+      {/* 1980s 6.9% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#D65A4A'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='6.9 100'
+        strokeDashoffset='-93.1'>
+        <title>1980s — 6.9%</title>
+      </circle>
+
+      {/* Center hole */}
+      <circle r='4.5' cx='16' cy='16' fill='white' />
+
+    </svg>
+
+    {/* LEGEND */}
+    <div style={{ textAlign: 'left', fontSize: '14px' }}>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#83B4B3', marginRight: '8px' }}></span>
+        1970–1975 — 52.8%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#FFF0CE', marginRight: '8px' }}></span>
+        1976–1979 — 40.3%
+      </div>
+
+      <div>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#D65A4A', marginRight: '8px' }}></span>
+        1980s — 6.9%
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style={{ fontSize: '12px', color: '#64748b', marginTop: '20px', fontStyle: 'italic' }}>
+    Hover over each colored slice to see the percentage.
+  </p>
+
+</div>
+
+<div style={{ margin: '60px 0', fontFamily: 'sans-serif', textAlign: 'center' }}>
+
+  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '30px' }}>
+    EIS Documents by Lead Agency
+  </h3>
+
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+
+    {/* PIE */}
+    <svg viewBox='0 0 32 32'
+         style={{ width: '300px', height: '300px', transform: 'rotate(-90deg)' }}>
+
+      {/* Background */}
+      <circle r='8' cx='16' cy='16'
+              fill='none'
+              stroke='#f1f5f9'
+              strokeWidth='16' />
+
+      {/* Department of Housing and Urban Development (HUD) D 27.8% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#2A9D8F'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='27.8 100'>
+        <title> Department of Housing and Urban Development (HUD) — 27.8%</title>
+      </circle>
+
+      {/* Federal Highway Administration 12.5% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#E76F51'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='12.5 100'
+        strokeDashoffset='-27.8'>
+        <title>Federal Highway Administration — 12.5%</title>
+      </circle>
+
+      {/* Urban Mass Transportation Administration 6.9% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#F4A261'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='6.9 100'
+        strokeDashoffset='-40.3'>
+        <title>Urban Mass Transportation Administration — 6.9%</title>
+      </circle>
+
+      {/* Bureau of Reclamation 4.9% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#5C6F91'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='4.9 100'
+        strokeDashoffset='-47.2'>
+        <title>Bureau of Reclamation — 4.9%</title>
+      </circle>
+
+      {/* Centers of Excellence 4.2% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#A8C3A1'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='4.2 100'
+        strokeDashoffset='-52.1'>
+        <title>Centers of Excellence — 4.2%</title>
+      </circle>
+
+      {/* Other Agencies 43.7% */}
+      <circle
+        r='8' cx='16' cy='16'
+        fill='none'
+        stroke='#C9C9C9'
+        strokeWidth='16'
+        pathLength='100'
+        strokeDasharray='43.7 100'
+        strokeDashoffset='-56.3'>
+        <title>Other Agencies — 43.7%</title>
+      </circle>
+
+      {/* Center hole */}
+      <circle r='4.5' cx='16' cy='16' fill='white' />
+
+    </svg>
+
+    {/* LEGEND */}
+    <div style={{ textAlign: 'left', fontSize: '14px' }}>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#2A9D8F', marginRight: '8px' }}></span>
+        Department of Housing and Urban Development (HUD) — 27.8%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#E76F51', marginRight: '8px' }}></span>
+        Federal Highway Administration — 12.5%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#F4A261', marginRight: '8px' }}></span>
+        Urban Mass Transportation Administration — 6.9%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#5C6F91', marginRight: '8px' }}></span>
+        Bureau of Reclamation — 4.9%
+      </div>
+
+      <div style={{ marginBottom: '8px' }}>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#A8C3A1', marginRight: '8px' }}></span>
+        Centers of Excellence — 4.2%
+      </div>
+
+      <div>
+        <span style={{ display: 'inline-block', width: '14px', height: '14px', background: '#C9C9C9', marginRight: '8px' }}></span>
+        Other Agencies — 43.7%
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style={{ fontSize: '12px', color: '#64748b', marginTop: '20px', fontStyle: 'italic' }}>
+    Hover over each colored slice to see the percentage.
+  </p>
+
+</div>
+
+## About the Categories
+
+### Urban Development & Housing: 29.2% (42 documents)
+Projects centered on urban renewal, community block grants, residential or commercial real estate development, and public housing facilities.
+Examples: Downtown revitalization efforts, disaster recovery rebuilding (such as after Hurricane Agnes), apartment complexes, and government buildings.
+
+Easter Egg EIS documents: Loring Park Pedestrian Greenway (1977): planned redevelopment in Minneapolis featuring 2,000 residential units 
+and 1,050 hotel units, with a "raised pedestrian greenway" designed to completely separate vehicular and pedestrian traffic while physically 
+integrating the downtown area with a local park
+
+### Transportation & Infrastructure: 27.1% (39 documents)
+Initiatives focused on mass transit systems, highway and road construction, airport expansions, railroad corridors, and vehicle regulations.
+Examples: Interstate highway extensions, subway and light rail construction (like the NY Subway or MARTA), airport land acquisitions, and automotive fuel economy standards.
+
+Easter Egg EIS documents: A car-free Times Square (1980). For a detailed exhibition on this topic, click here.
+
+### Environment, Water, & Natural Resources: 16.7% (24 documents)
+Efforts concerning water management, flood control, pollution, wildlife protection, land conservation, and weather modification.
+Examples: Cloud seeding experiments, river dredging, harbor deepening, endangered species protection, and national park land management.
+
+Easter Egg EIS documents: "Project STORMFURY" (1972), aiming to fly missions directly into hurricanes to drop silver iodide into the clouds, attempting to weaken the storms 
+
+### Energy & Power Generation: 11.1% (16 documents)
+Developments involving power plants, electricity transmission infrastructure, alternative fuels, and energy resource extraction.
+Examples: Nuclear station operations (e.g., Three Mile Island, Diablo Canyon), hydroelectric pumped-storage, high-voltage transmission lines, and coal leases.
+
+Easter Egg EIS documents: Deep Geothermal Drilling (1972) details an early attempt to drill a test well between 4,000 and 8,000 feet deep in California's Imperial Valley
+
+### Health & Safety: 6.2% (9 documents)
+Regulations and interventions aimed at protecting human health from hazardous chemicals, dangerous products, and occupational hazards.
+Examples: Occupational exposure limits for lead and vinyl chloride, regulations on lead-containing paints, marijuana eradication, and chemical waste incineration.
+
+Easter Egg EIS documents: Chemical Waste Incinerator Ship Project (1976): to deal with the growing volume of toxic chemical wastes like chlorinated hydrocarbons, the government supported developing a fleet of ships to simply incinerate the toxic waste at sea
+
+
+### Aerospace & Defense: 4.9% (7 documents)
+Criteria: Space exploration missions, military operations, and aircraft testing or development.
+Examples: Naval weapons training, underground nuclear tests, and Air Force aircraft development.
+
+Easter Egg EIS documents: NASA's 1972 EIS statements for the final Apollo 16 and 17 lunar landing missions (LINK TO THAT EIS document)
+
+### Recreation, Culture, Diplomacy & Other: 4.9% (7 documents)
+Criteria: Public events, international expositions, sports and recreation events, and miscellaneous administrative actions.
+Examples: the Spokane '74 and Knoxville Expositions, off-road motorcycle races, and the Panama Canal Treaty.
+
+Easter Egg EIS documents: the XIII Olympic Winter Games in 1980 at Lake Placid, New York (LINK TO THAT EIS document)
+
+</Container>
