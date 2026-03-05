@@ -4,6 +4,8 @@
 @import "./northwestern-brand.css";
 @import "./module.css";
 @import "./glossary.css";
+@import "./annotations.css";
+
 
 @layer properties {
   :root,
