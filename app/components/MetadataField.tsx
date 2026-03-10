@@ -41,10 +41,16 @@ export default function MetadataField({
   if (values.length === 0) return null;
 
   if (display === "inline") {
+    const value = values.join(", ");
+    const lower = value.toLowerCase();
+    const colorClass =
+      lower === "yes" ? "canopy-badge--yes" :
+      lower === "no" ? "canopy-badge--no" :
+      undefined;
     return (
       <span>
         {prefix && <span>{prefix}</span>}
-        {values.join(", ")}
+        {colorClass ? <span className={`canopy-badge ${colorClass}`}>{value}</span> : value}
       </span>
     );
   }

@@ -77,6 +77,25 @@ p.canopy-work--summary {
   line-height: 1.7;
 }
 
+/* Yes / No badges */
+.canopy-badge {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 0.25em;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.canopy-badge--yes {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.canopy-badge--no {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
 @media (max-width: 768px) {
   .canopy-work--hero {
     grid-template-columns: 1fr;
