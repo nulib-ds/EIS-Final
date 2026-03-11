@@ -1,17 +1,10 @@
 import {Card} from "@canopy-iiif/app/ui";
 
-<div className="canopy-figure-result">
-  <Card
-    href={props.record?.href}
-    title={props.record?.title || props.record?.href || "Untitled"}
-    src={props.record?.type === "work" ? props.record?.thumbnail : undefined}
-    imgWidth={props.record?.thumbnailWidth}
-    imgHeight={props.record?.thumbnailHeight}
-    aspectRatio={props.thumbnailAspectRatio}
-  />
-  {Array.isArray(props.record?.metadata) && props.record.metadata.find((m) => m.label === "Year") && (
-    <span className="canopy-figure-year">
-      {props.record.metadata.find((m) => m.label === "Year").value}
-    </span>
-  )}
-</div>
+<Card
+  href={props.record?.href}
+  title={props.record?.title || props.record?.href || "Untitled"}
+  src={props.record?.type === "work" ? props.record?.thumbnail : undefined}
+  imgWidth={props.record?.thumbnailWidth}
+  imgHeight={props.record?.thumbnailHeight}
+  aspectRatio={props.thumbnailAspectRatio}
+/>
