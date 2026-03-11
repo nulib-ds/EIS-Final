@@ -26,7 +26,6 @@
 
 .canopy-work--header h1 {
   margin-bottom: 0.25rem;
-  color: #2e2040;
 }
 
 /* Location • Completed row */
@@ -114,12 +113,20 @@ p.canopy-work--summary {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding: 1.75rem 1.5rem;
-  background: #f2f0f6;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   border-top: 2px solid #D9D9D9;
+  align-items: start;
 }
 
-.canopy-work--footer-grid .canopy-metadata-field h3 {
+/* Key People — boxed */
+.canopy-work--people {
+  background: #f2f0f6;
+  border-top: 3px solid #6A5885;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.canopy-work--people .canopy-metadata-field h3 {
   font-size: 0.68rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -130,11 +137,18 @@ p.canopy-work--summary {
   margin-bottom: 0.75rem;
 }
 
-.canopy-work--footer-grid .canopy-metadata-field ul {
+.canopy-work--people .canopy-metadata-field ul {
   list-style: disc;
   padding-left: 1.25rem;
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+/* Attribution — plain */
+.canopy-work--attribution {
+  font-size: 0.9rem;
+  color: var(--color-gray-600, #4b5563);
+  line-height: 1.6;
 }
 
 /* Related Items */

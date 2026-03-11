@@ -40,11 +40,11 @@ import {
 
 {/* ── People + Attribution: two columns ── */}
 <Container className="canopy-work--footer-grid">
-  <div>
+  <div className="canopy-work--people">
     <MetadataField manifest={props.manifest} field="Key People" label="Key People" />
     <References />
   </div>
-  <div>
+  <div className="canopy-work--attribution">
     <RequiredStatement manifest={props.manifest} />
   </div>
 </Container>
