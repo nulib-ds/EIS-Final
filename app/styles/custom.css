@@ -93,6 +93,28 @@ p.canopy-work--summary {
   color: var(--color-gray-600, #4b5563);
 }
 
+/* Year + Department block under summary */
+.canopy-work--details {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.canopy-work--details .canopy-metadata-field h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-500, #6b7280);
+  margin-bottom: 0.2rem;
+}
+
+.canopy-work--details .canopy-metadata-field p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* Yes / No badges */
 .canopy-badge {
   display: inline-block;

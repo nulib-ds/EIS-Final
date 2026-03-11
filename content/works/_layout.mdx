@@ -22,6 +22,10 @@ import {
         <MetadataField manifest={props.manifest} field="Completed" display="inline" prefix="Completed: " />
       </div>
       <Summary manifest={props.manifest} as="p" className="canopy-work--summary" />
+      <div className="canopy-work--details">
+        <MetadataField manifest={props.manifest} field="Year" label="Year" />
+        <MetadataField manifest={props.manifest} field="Bureau" label="Department" />
+      </div>
     </div>
   </div>
 </Container>
