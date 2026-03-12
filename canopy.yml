@@ -9,11 +9,9 @@ manifest:
   # https://iiif.vam.ac.uk/collections/O136839/manifest.json
   # https://iiif.vam.ac.uk/collections/O74660/manifest.json
 metadata:
-  - Summary
   - Themes
+  - Key People and Groups
   - Main Location
-  - Key People
-  - Historical Context
   - Completed
   - Year
   - Bureau
