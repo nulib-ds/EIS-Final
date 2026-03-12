@@ -19,7 +19,7 @@ import {
       <Label manifest={props.manifest} as="h1" />
       <div className="canopy-work--byline">
         <MetadataField manifest={props.manifest} field="Main Location" display="inline" />
-        <MetadataField manifest={props.manifest} field="Completed" display="inline" prefix="Completed: " />
+        <MetadataField manifest={props.manifest} field="Completed" display="inline" />
       </div>
       <Summary manifest={props.manifest} as="p" className="canopy-work--summary" />
       <div className="canopy-work--details">
@@ -36,12 +36,13 @@ import {
 {/* ── Historical Context: spans the page ── */}
 <Container className="canopy-work--context">
   <MetadataField manifest={props.manifest} field="Historical Context" label="Historical Context" />
+  <MetadataField manifest={props.manifest} field="Notable Quotes" label="Notable Quotes" />
 </Container>
 
 {/* ── People + Attribution: two columns ── */}
 <Container className="canopy-work--footer-grid">
   <div className="canopy-work--people">
-    <MetadataField manifest={props.manifest} field="Key People" label="Key People" />
+    <MetadataField manifest={props.manifest} field="Key People and Groups" label="Key People and Groups" />
     <References />
   </div>
   <div className="canopy-work--attribution">
