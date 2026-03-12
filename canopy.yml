@@ -17,6 +17,7 @@ metadata:
   - Completed
   - Year
   - Bureau
+  - Contributor
   - Notable Quotes
 featured:
   - https://api.dc.library.northwestern.edu/api/v2/works/c26591b2-994b-4ba3-a87e-9124419fa91b?as=iiif
