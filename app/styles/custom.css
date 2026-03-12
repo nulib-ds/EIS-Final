@@ -163,53 +163,6 @@ p.canopy-work--summary {
   margin-bottom: 1.5rem;
 }
 
-/* ── Uniform tile grid (override masonry for equal-height cards) ── */
-
-/* Turn the masonry flex container into a CSS grid */
-.canopy-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.618rem !important;
-  width: 100% !important;
-}
-
-/* Collapse masonry columns so their children become direct grid cells */
-.canopy-grid .canopy-grid-column {
-  display: contents !important;
-}
-
-/* Each item fills its grid cell */
-.canopy-grid-item {
-  height: 100%;
-  margin-bottom: 0 !important;
-}
-
-/* Cards stretch to fill cell and stack vertically */
-.canopy-card {
-  height: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.canopy-card figure {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-}
-
-/* Fixed 4:3 aspect ratio on thumbnail so all images are the same height */
-.canopy-card .canopy-card-media {
-  --canopy-card-padding: 75%;
-  flex-shrink: 0;
-}
-
-/* Caption grows to fill remaining card height, aligning text baselines */
-.canopy-card figcaption {
-  flex: 1;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
 /* Year tag on search result cards */
 .canopy-figure-result {
   position: relative;
