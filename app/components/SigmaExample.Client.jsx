@@ -3,7 +3,7 @@ import React, {useEffect, useRef, useState} from "react";
 const GRAPH_CDN_URL = "https://esm.sh/graphology@0.25.4?bundle";
 const SIGMA_CDN_URL = "https://esm.sh/sigma@3.0.0?bundle";
 const COLLECTION_URL =
-  "https://raw.githubusercontent.com/gracegormley-gkg/canumpy-/main/collection.json";
+  "https://raw.githubusercontent.com/gracegormley-gkg/canumpy-/main/collection-eis-v3.json";
 
 const CANOPY_BASE_URL = "https://nulib-ds.github.io/EIS-Final";
 
