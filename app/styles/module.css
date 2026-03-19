@@ -10,6 +10,7 @@
   box-shadow: 2.5px 5px 9px #888888;
   margin-bottom: 2rem;
   text-decoration: none;
+  border: 1.5px solid #d1d5db;
 }
 
 .module-box .text {
