@@ -25,5 +25,6 @@ export const clientComponents = {
   LightboxImage: './LightboxImage.client.tsx',
   ScrollExplore: './ScrollExplore.client.tsx',
   StickyLightbox: './Stickylightbox.client.tsx',
+  EISMap: './EISMap.client.jsx',
 };
 
