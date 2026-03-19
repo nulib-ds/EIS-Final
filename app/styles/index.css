@@ -30,7 +30,7 @@
 
 @layer base {
   html {
-    font-size: 110%;
+    font-size: clamp(90%, 1vw + 0.5rem, 110%);
     font-weight: 300;
   }
 
@@ -39,13 +39,28 @@
     color: var(--color-gray-900);
   }
 
+  h1 {
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 3vw + 0.4rem, 2.25rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 2vw + 0.4rem, 1.75rem);
+  }
+
+  h4 {
+    font-size: clamp(1rem, 1.5vw + 0.3rem, 1.4rem);
+  }
+
   h1,
   h2,
   h3,
   h4,
   .canopy-logo {
     font-family: var(--font-serif);
-    /* hi */
     font-weight: 600;
     letter-spacing: -0.025em;
   }
