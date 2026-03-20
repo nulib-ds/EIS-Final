@@ -230,6 +230,7 @@
   }
 }
 
+/* ── StickyLightbox component ─────────────────────── */
 .sticky-lightbox-annotation {
   position: relative;
   width: 100%;
@@ -255,7 +256,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 20vh auto;
+  margin: 30vh auto;
   width: 80vw;
   padding: 0;
   box-sizing: border-box;
@@ -397,6 +398,95 @@
   }
 }
 
+.sticky-lightbox-collage {
+  width: 65%;
+  flex-shrink: 0;
+  position: relative;
+  height: 500px;
+}
+
+.sticky-lightbox-collage-item {
+  position: absolute;
+  cursor: zoom-in;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.25);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-lightbox-collage-item:hover {
+  box-shadow: 6px 6px 20px rgba(0,0,0,0.35);
+  z-index: 10;
+}
+
+.sticky-lightbox-collage-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.sticky-lightbox-collage-item .sticky-lightbox-zoom {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.sticky-lightbox-collage-item:hover .sticky-lightbox-zoom {
+  opacity: 1;
+}
+
+.sticky-lightbox-collage-item-0 {
+  width: 48%;
+  height: 48%;
+  top: 2%;
+  left: 1%;
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+
+.sticky-lightbox-collage-item-1 {
+  width: 46%;
+  height: 46%;
+  top: 0%;
+  right: 1%;
+  transform: rotate(2.5deg);
+  z-index: 2;
+}
+
+.sticky-lightbox-collage-item-2 {
+  width: 46%;
+  height: 46%;
+  bottom: 1%;
+  left: 2%;
+  transform: rotate(1.5deg);
+  z-index: 4;
+}
+
+.sticky-lightbox-collage-item-3 {
+  width: 48%;
+  height: 48%;
+  bottom: 0%;
+  right: 1%;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .sticky-lightbox-collage {
+    width: 100%;
+    height: 320px;
+  }
+}
+
 .lightbox-overlay {
   display: none;
   position: fixed;
@@ -436,8 +526,10 @@
   opacity: 1;
 }
 
-.full-page-spacer {
-  height: 20vh;
-  width: 100vw;
-  background-color:#f5f4ef;
+.center-image {
+  display: block !important;
+  margin: 40px auto !important;
+  max-width: 90% !important;
+  width: auto !important;
+  height: auto !important;
 }

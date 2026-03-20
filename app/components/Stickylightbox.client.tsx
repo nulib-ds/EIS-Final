@@ -12,6 +12,9 @@ interface StickyLightboxProps {
   lightboxSrc3?: string;
   alt3?: string;
   caption3?: string;
+  lightboxSrc4?: string;
+  alt4?: string;
+  caption4?: string;
   heading?: string;
   body?: string;
   listItem1?: string;
@@ -23,6 +26,8 @@ interface StickyLightboxProps {
   listItem4?: string;
   boldPrefix4?: string;
   textPosition?: "left" | "right";
+  backgroundCaption?: string;
+  collage?: boolean;
 }
 
 export default function StickyLightbox({
@@ -36,6 +41,9 @@ export default function StickyLightbox({
   lightboxSrc3,
   alt3,
   caption3,
+  lightboxSrc4,
+  alt4,
+  caption4,
   heading,
   body,
   listItem1,
@@ -47,6 +55,8 @@ export default function StickyLightbox({
   listItem4,
   boldPrefix4,
   textPosition = "left",
+  backgroundCaption,
+  collage = false,
 }: StickyLightboxProps) {
   const [openSrc, setOpenSrc] = useState<string | null>(null);
   const [visible, setVisible] = useState(false);
@@ -56,6 +66,7 @@ export default function StickyLightbox({
     { src: `${getBasePath()}${lightboxSrc}`, alt, caption },
     ...(lightboxSrc2 ? [{ src: `${getBasePath()}${lightboxSrc2}`, alt: alt2 ?? "", caption: caption2 }] : []),
     ...(lightboxSrc3 ? [{ src: `${getBasePath()}${lightboxSrc3}`, alt: alt3 ?? "", caption: caption3 }] : []),
+    ...(lightboxSrc4 ? [{ src: `${getBasePath()}${lightboxSrc4}`, alt: alt4 ?? "", caption: caption4 }] : []),
   ];
 
   useEffect(() => {
@@ -92,6 +103,9 @@ export default function StickyLightbox({
         style={!resolvedBg ? { background: "#fff" } : undefined}
       >
         {resolvedBg && <img src={resolvedBg} alt="" className="anno-photo" />}
+        {backgroundCaption && (
+          <div className="sticky-lightbox-bg-caption">{backgroundCaption}</div>
+        )}
       </div>
 
       <div className={`sticky-lightbox-anchor sticky-lightbox-inner sticky-lightbox-${textPosition}`}>
@@ -111,23 +125,38 @@ export default function StickyLightbox({
           </div>
         </div>
 
-        {/* Images stacked on the right */}
-        <div className="sticky-lightbox-images-col">
-          {images.map((img, i) => (
-            <div key={i} className="sticky-lightbox-image-col">
+        {/* Images — collage or grid */}
+        {collage ? (
+          <div className="sticky-lightbox-collage">
+            {images.map((img, i) => (
               <div
-                className="sticky-lightbox-image"
+                key={i}
+                className={`sticky-lightbox-collage-item sticky-lightbox-collage-item-${i}`}
                 onClick={() => setOpenSrc(img.src)}
               >
                 <img src={img.src} alt={img.alt} />
                 <span className="sticky-lightbox-zoom">⤢</span>
               </div>
-              {img.caption && (
-                <p className="sticky-lightbox-caption">{img.caption}</p>
-              )}
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="sticky-lightbox-images-col">
+            {images.map((img, i) => (
+              <div key={i} className="sticky-lightbox-image-col">
+                <div
+                  className="sticky-lightbox-image"
+                  onClick={() => setOpenSrc(img.src)}
+                >
+                  <img src={img.src} alt={img.alt} />
+                  <span className="sticky-lightbox-zoom">⤢</span>
+                </div>
+                {img.caption && (
+                  <p className="sticky-lightbox-caption">{img.caption}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {openSrc && (
