@@ -7,6 +7,7 @@ interface StickyLightboxProps {
   alt: string;
   heading?: string;
   body?: string;
+  caption?: string;
 }
 
 export default function StickyLightbox({
@@ -15,6 +16,7 @@ export default function StickyLightbox({
   alt,
   heading,
   body,
+  caption,
 }: StickyLightboxProps) {
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -57,12 +59,12 @@ export default function StickyLightbox({
       </div>
 
       <div className="sticky-lightbox-anchor sticky-lightbox-inner">
-        <div
-          className="sticky-lightbox-image"
-          onClick={() => setOpen(true)}
-        >
-          <img src={resolvedLightbox} alt={alt} />
-          <span className="sticky-lightbox-zoom">⤢</span>
+        <div className="sticky-lightbox-image-col">
+          <div className="sticky-lightbox-image" onClick={() => setOpen(true)}>
+            <img src={resolvedLightbox} alt={alt} />
+            <span className="sticky-lightbox-zoom">⤢</span>
+          </div>
+          {caption && <p className="sticky-lightbox-caption">{caption}</p>}
         </div>
 
         <div className="sticky-lightbox-text-column">
