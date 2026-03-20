@@ -5,29 +5,64 @@ interface StickyLightboxProps {
   backgroundSrc?: string;
   lightboxSrc: string;
   alt: string;
+  caption?: string;
+  lightboxSrc2?: string;
+  alt2?: string;
+  caption2?: string;
+  lightboxSrc3?: string;
+  alt3?: string;
+  caption3?: string;
   heading?: string;
   body?: string;
-  caption?: string;
+  listItem1?: string;
+  boldPrefix1?: string;
+  listItem2?: string;
+  boldPrefix2?: string;
+  listItem3?: string;
+  boldPrefix3?: string;
+  listItem4?: string;
+  boldPrefix4?: string;
+  textPosition?: "left" | "right";
 }
 
 export default function StickyLightbox({
   backgroundSrc,
   lightboxSrc,
   alt,
+  caption,
+  lightboxSrc2,
+  alt2,
+  caption2,
+  lightboxSrc3,
+  alt3,
+  caption3,
   heading,
   body,
-  caption,
+  listItem1,
+  boldPrefix1,
+  listItem2,
+  boldPrefix2,
+  listItem3,
+  boldPrefix3,
+  listItem4,
+  boldPrefix4,
+  textPosition = "left",
 }: StickyLightboxProps) {
-  const [open, setOpen] = useState(false);
+  const [openSrc, setOpenSrc] = useState<string | null>(null);
   const [visible, setVisible] = useState(false);
   const resolvedBg = backgroundSrc ? `${getBasePath()}${backgroundSrc}` : null;
-  const resolvedLightbox = `${getBasePath()}${lightboxSrc}`;
+
+  const images = [
+    { src: `${getBasePath()}${lightboxSrc}`, alt, caption },
+    ...(lightboxSrc2 ? [{ src: `${getBasePath()}${lightboxSrc2}`, alt: alt2 ?? "", caption: caption2 }] : []),
+    ...(lightboxSrc3 ? [{ src: `${getBasePath()}${lightboxSrc3}`, alt: alt3 ?? "", caption: caption3 }] : []),
+  ];
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") setOpenSrc(null);
     };
-    if (open) {
+    if (openSrc) {
       document.addEventListener("keydown", handleKey);
       document.body.style.overflow = "hidden";
     } else {
@@ -37,12 +72,11 @@ export default function StickyLightbox({
       document.removeEventListener("keydown", handleKey);
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [openSrc]);
 
   useEffect(() => {
     const el = document.querySelector(".sticky-lightbox-anchor");
     if (!el) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0 }
@@ -53,39 +87,60 @@ export default function StickyLightbox({
 
   return (
     <div className="sticky-lightbox-annotation">
-      <div className={`photo-container${visible ? " position-fixed" : ""}`}
-        style={!resolvedBg ? { background: "#fff" } : undefined}>
+      <div
+        className={`photo-container${visible ? " position-fixed" : ""}`}
+        style={!resolvedBg ? { background: "#fff" } : undefined}
+      >
         {resolvedBg && <img src={resolvedBg} alt="" className="anno-photo" />}
       </div>
 
-      <div className="sticky-lightbox-anchor sticky-lightbox-inner">
-        <div className="sticky-lightbox-image-col">
-          <div className="sticky-lightbox-image" onClick={() => setOpen(true)}>
-            <img src={resolvedLightbox} alt={alt} />
-            <span className="sticky-lightbox-zoom">⤢</span>
-          </div>
-          {caption && <p className="sticky-lightbox-caption">{caption}</p>}
-        </div>
-
+      <div className={`sticky-lightbox-anchor sticky-lightbox-inner sticky-lightbox-${textPosition}`}>
+        {/* Text on the left */}
         <div className="sticky-lightbox-text-column">
           <div className="sticky-lightbox-text">
             {heading && <h2>{heading}</h2>}
             {body && <p>{body}</p>}
+            {(listItem1 || listItem2 || listItem3 || listItem4) && (
+              <ul>
+                {listItem1 && <li>{boldPrefix1 && <strong>{boldPrefix1} </strong>}{listItem1}</li>}
+                {listItem2 && <li>{boldPrefix2 && <strong>{boldPrefix2} </strong>}{listItem2}</li>}
+                {listItem3 && <li>{boldPrefix3 && <strong>{boldPrefix3} </strong>}{listItem3}</li>}
+                {listItem4 && <li>{boldPrefix4 && <strong>{boldPrefix4} </strong>}{listItem4}</li>}
+              </ul>
+            )}
           </div>
+        </div>
+
+        {/* Images stacked on the right */}
+        <div className="sticky-lightbox-images-col">
+          {images.map((img, i) => (
+            <div key={i} className="sticky-lightbox-image-col">
+              <div
+                className="sticky-lightbox-image"
+                onClick={() => setOpenSrc(img.src)}
+              >
+                <img src={img.src} alt={img.alt} />
+                <span className="sticky-lightbox-zoom">⤢</span>
+              </div>
+              {img.caption && (
+                <p className="sticky-lightbox-caption">{img.caption}</p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
-      {open && (
+      {openSrc && (
         <div
           className="lightbox-overlay active"
           onClick={(e) => {
-            if (e.target === e.currentTarget) setOpen(false);
+            if (e.target === e.currentTarget) setOpenSrc(null);
           }}
         >
-          <button className="lightbox-close" onClick={() => setOpen(false)}>
+          <button className="lightbox-close" onClick={() => setOpenSrc(null)}>
             ✕
           </button>
-          <img src={resolvedLightbox} alt={alt} />
+          <img src={openSrc} alt="" />
         </div>
       )}
     </div>

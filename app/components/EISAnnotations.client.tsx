@@ -3,14 +3,31 @@ import { useEffect } from 'react';
 export default function EISAnnotations() {
   useEffect(() => {
     const handleScroll = () => {
-      document.querySelectorAll('.sticky-annotation').forEach((annotation) => {
+      const annotations = document.querySelectorAll('.sticky-annotation');
+      const viewportCenter = window.innerHeight / 2;
+
+      let closestAnnotation: Element | null = null;
+      let closestDistance = Infinity;
+
+      annotations.forEach((annotation) => {
+        const rect = annotation.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (!isInView) return;
+
+        const annotationCenter = (rect.top + rect.bottom) / 2;
+        const distance = Math.abs(annotationCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestAnnotation = annotation;
+        }
+      });
+
+      annotations.forEach((annotation) => {
         const container = annotation.querySelector('.photo-container') as HTMLElement;
         if (!container) return;
 
-        const rect = annotation.getBoundingClientRect();
-        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
-
-        if (isInView) {
+        if (annotation === closestAnnotation) {
           container.classList.add('position-fixed');
           container.style.opacity = '1';
         } else {
