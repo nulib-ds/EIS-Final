@@ -18,6 +18,6 @@ export const exhibitions = [
     title: "Invisible Hazards",
     description:
       'This exhibition features documents on health hazards of lead-based paint.',
-    image: "/images/home/chicago-bw.webp"
+    image: "/images/invisible-hazards/Warrencountymap.png"
   },
 ];
