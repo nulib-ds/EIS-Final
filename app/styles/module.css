@@ -7,9 +7,20 @@
   overflow: hidden;
   width: 100%;
   height: 40vh;
-  box-shadow: 2.5px 5px 9px #888888;
   margin-bottom: 2rem;
   text-decoration: none;
+  color: inherit;
+  border: 1.25px solid #e0e0e0;
+  transition: box-shadow 0.2s ease;
+}
+
+.module-box:hover {
+  box-shadow: 2.5px 5px 9px #888888;
+}
+
+a.module-box,
+a.module-box:visited {
+  color: inherit;
 }
 
 .module-box .text {
@@ -33,6 +44,7 @@
   line-height: 1;
   margin-bottom: 0.5em;
   font-size: clamp(1.3rem, 1.5vw + 0.8rem, 2.2rem);
+  color: #1a1a1a;
 }
 
 .module-box .text p,
