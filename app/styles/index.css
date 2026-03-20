@@ -40,11 +40,11 @@
   }
 
   h1 {
-    font-size: clamp(1.6rem, 4vw + 0.5rem, 3rem);
+    font-size: clamp(1.6rem, 3vw + 0.5rem, 2.25rem);
   }
 
   h2 {
-    font-size: clamp(1.3rem, 3vw + 0.4rem, 2.25rem);
+    font-size: clamp(1.3rem, 3vw + 0.4rem, 2.0rem);
   }
 
   h3 {
