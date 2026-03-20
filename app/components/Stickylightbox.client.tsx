@@ -59,6 +59,7 @@ export default function StickyLightbox({
   collage = false,
 }: StickyLightboxProps) {
   const [openSrc, setOpenSrc] = useState<string | null>(null);
+  const [openCaption, setOpenCaption] = useState<string | null>(null);
   const [visible, setVisible] = useState(false);
   const resolvedBg = backgroundSrc ? `${getBasePath()}${backgroundSrc}` : null;
 
@@ -71,7 +72,10 @@ export default function StickyLightbox({
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenSrc(null);
+      if (e.key === "Escape") {
+        setOpenSrc(null);
+        setOpenCaption(null);
+      }
     };
     if (openSrc) {
       document.addEventListener("keydown", handleKey);
@@ -132,9 +136,12 @@ export default function StickyLightbox({
               <div
                 key={i}
                 className={`sticky-lightbox-collage-item sticky-lightbox-collage-item-${i}`}
-                onClick={() => setOpenSrc(img.src)}
+                onClick={() => { setOpenSrc(img.src); setOpenCaption(img.caption ?? null); }}
               >
                 <img src={img.src} alt={img.alt} />
+                {img.caption && (
+                  <div className="sticky-lightbox-collage-caption">{img.caption}</div>
+                )}
                 <span className="sticky-lightbox-zoom">⤢</span>
               </div>
             ))}
@@ -145,7 +152,7 @@ export default function StickyLightbox({
               <div key={i} className="sticky-lightbox-image-col">
                 <div
                   className="sticky-lightbox-image"
-                  onClick={() => setOpenSrc(img.src)}
+                  onClick={() => { setOpenSrc(img.src); setOpenCaption(img.caption ?? null); }}
                 >
                   <img src={img.src} alt={img.alt} />
                   <span className="sticky-lightbox-zoom">⤢</span>
@@ -163,13 +170,16 @@ export default function StickyLightbox({
         <div
           className="lightbox-overlay active"
           onClick={(e) => {
-            if (e.target === e.currentTarget) setOpenSrc(null);
+            if (e.target === e.currentTarget) { setOpenSrc(null); setOpenCaption(null); }
           }}
         >
-          <button className="lightbox-close" onClick={() => setOpenSrc(null)}>
+          <button className="lightbox-close" onClick={() => { setOpenSrc(null); setOpenCaption(null); }}>
             ✕
           </button>
-          <img src={openSrc} alt="" />
+          <div className="lightbox-content">
+            <img src={openSrc} alt="" />
+            {openCaption && <p className="lightbox-caption">{openCaption}</p>}
+          </div>
         </div>
       )}
     </div>
